@@ -16,7 +16,6 @@ import { TbAtom } from "react-icons/tb";
 
 import LogOut from "./LogOut";
 import Topic from "./Topic";
-import Image from "next/image";
 
 type DiscoverProps = {};
 
@@ -66,7 +65,7 @@ const Discover: React.FC<DiscoverProps> = () => {
           className="flex items-center cursor-pointer"
           onClick={() => (isShow ? setIsShow(false) : setIsShow(true))}
         >
-          <Image
+          <img
             src={session?.user?.image as string}
             alt=""
             className="w-12 h-12 rounded-full"

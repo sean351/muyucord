@@ -20,7 +20,6 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { firestore, storage } from "../firebase/firebase";
 import chatSelectFile from "../hooks/chatSelectFile";
 import Chat from "./Chat";
-import Image from "next/image";
 
 type ChatContentProps = {
   docIds: any;
@@ -181,7 +180,7 @@ const ChatContent: React.FC<ChatContentProps> = ({ docIds }) => {
                   </svg>
                   Be sure to inclide only relevant material here
                 </p>
-                <Image
+                <img
                   src={selectedFile}
                   alt=""
                   className="max-w-xs max-h-60  rounded-md border border-gray-500 px-2 py-2 cursor-pointer"

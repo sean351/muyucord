@@ -2,7 +2,6 @@ import { faker } from "@faker-js/faker";
 import { motion } from "framer-motion";
 import { shuffle } from "lodash";
 import { useSession } from "next-auth/react";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -61,13 +60,13 @@ const Card: React.FC<CardProps> = ({
     >
       <div className="h-40 flex w-full cursor-pointer">
         {bannerImage ? (
-          <Image
+          <img
             alt=""
             src={bannerImage}
             className="rounded-t-[0.8rem] object-cover w-full"
           />
         ) : (
-          <Image
+          <img
             alt=""
             src={shuffle(posterCardImage).pop() as string}
             className="rounded-t-[0.8rem] object-cover w-full"
@@ -77,13 +76,13 @@ const Card: React.FC<CardProps> = ({
       <div className="bg-[#292b2f] relative h-[11.5rem] px-[1rem] rounded-b-[0.8rem] ">
         <div className="absolute -top-8  left-4 w-16 h-16 flex rounded-[1rem] p-1 bg-[#292b2f]">
           {avatarImage ? (
-            <Image
+            <img
               alt=""
               src={avatarImage}
               className="  object-cover   rounded-[1rem]"
             />
           ) : (
-            <Image
+            <img
               alt=""
               src={shuffle(sideBarImage).pop() as string}
               className="  object-cover   rounded-[1rem]"

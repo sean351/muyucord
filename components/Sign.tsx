@@ -2,7 +2,6 @@ import React from "react";
 import { signIn } from "next-auth/react";
 
 import { AiOutlineDownload } from "react-icons/ai";
-import Image from "next/image";
 
 type SignProps = {};
 
@@ -29,12 +28,12 @@ const Sign: React.FC<SignProps> = () => {
           </div>
         </div>
         <div className="flex-grow">
-          <Image
+          <img
             src="https://drive.google.com/uc?export=download&id=1rAb-Vh1ViLa_mANwo4EjFoJEYi5VraU8"
             alt=""
             className="absolute -left-36 mt-16 sm:-left-44 md:hidden"
           />
-          <Image
+          <img
             src="https://drive.google.com/uc?export=download&id=1mXmUwiczchFZK0af4DCPgDsD4HIcRYWI"
             alt=""
             className="hidden md:inline absolute"

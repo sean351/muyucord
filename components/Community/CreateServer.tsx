@@ -20,7 +20,6 @@ import { firestore, storage } from "../../firebase/firebase";
 import bannerSelectFile from "../../hooks/bannerSelectFile";
 import useSelectFile from "../../hooks/useSelectFile";
 import ImageSelector from "./ImageSelector";
-import Image from "next/image";
 
 const sideBarImage = [
   "https://i.postimg.cc/ZK7ngyd5/img1.png",
@@ -195,7 +194,7 @@ const CreateServer: React.FC<CreateServerProps> = () => {
         <div className="flex justify-start items-center">
           {selectedFile ? (
             <div>
-              <Image
+              <img
                 src={selectedFile}
                 alt=""
                 className="object-cover rounded-full w-[108px] h-[108px] cursor-pointer hover:shadow-lg"
@@ -205,7 +204,7 @@ const CreateServer: React.FC<CreateServerProps> = () => {
             </div>
           ) : (
             <div>
-              <Image
+              <img
                 src={shuffle(sideBarImage).pop() as string}
                 alt="avtar/img"
                 className="object-cover rounded-full w-[108px] h-[108px] cursor-pointer hover:shadow-lg animate-pulse border border-gray-500 px-2 py-2"
