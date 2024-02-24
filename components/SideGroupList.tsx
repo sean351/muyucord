@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { shuffle } from "lodash";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 type Props = {
@@ -27,15 +28,17 @@ function SideGroupList({ card, sideBarImage }: Props) {
     <div className="w-14 h-14 flex cursor-pointer" onClick={handleNavigatePage}>
       {card.data().avatarImage ? (
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <img
+          <Image
+            alt=""
             src={card.data().avatarImage}
             className="rounded-full w-[57px] h-[57px]"
           />
         </motion.div>
       ) : (
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <img
-            src={shuffle(sideBarImage).pop()}
+          <Image
+            alt=""
+            src={shuffle(sideBarImage).pop() as string}
             className="rounded-full w-[57px] h-[57px]"
           />
         </motion.div>

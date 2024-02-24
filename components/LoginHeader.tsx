@@ -3,6 +3,7 @@ import Link from "next/link";
 import { signIn } from "next-auth/react";
 
 import { AiOutlineMenu } from "react-icons/ai";
+import Image from "next/image";
 
 type LoginHeaderProps = {};
 
@@ -10,7 +11,7 @@ const LoginHeader: React.FC<LoginHeaderProps> = () => {
   return (
     <header className="bg-discord_blue flex items-center justify-between py-4 px-6">
       <Link href="/">
-        <img
+        <Image
           src="https://drive.google.com/uc?export=download&id=1S8tEe7EeI9DBKkcyai6EttwydMuzlLWk"
           className="w-32 h-12 object-contain"
           alt=""

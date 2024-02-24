@@ -8,6 +8,7 @@ import { AiFillCompass } from "react-icons/ai";
 import { FiPlus } from "react-icons/fi";
 import { firestore } from "../firebase/firebase";
 import SideGroupList from "./SideGroupList";
+import Image from "next/image";
 
 const sideBarImage = [
   "https://i.postimg.cc/ZK7ngyd5/img1.png",
@@ -42,7 +43,8 @@ const Groups: React.FC<GroupsProps> = () => {
           className="bg-[#36393f] p-1 rounded-[1.3rem] cursor-pointer"
         >
           <Link href="/">
-            <img
+            <Image
+              alt=""
               src="https://i.postimg.cc/wj1MdTXc/dc.png"
               className="w-12 h-12 rounded-full text-white brightness-[80%]"
             />

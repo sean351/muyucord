@@ -2,6 +2,7 @@ import React from "react";
 import { useSession } from "next-auth/react";
 import moment from "moment";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type ChatProps = {
   chatImage: any;
@@ -36,7 +37,8 @@ const Chat: React.FC<ChatProps> = ({
           : `border-b border-gray-600 py-3 flex items-start mb-4 text-sm px-2`
       }
     >
-      <img
+      <Image
+        alt=""
         src={profileImage}
         className="cursor-pointer w-10 h-10 rounded-3xl mr-3"
       />
@@ -57,7 +59,7 @@ const Chat: React.FC<ChatProps> = ({
 
         {chatImage && (
           <div className="items-center">
-            <img
+            <Image
               src={chatImage}
               alt=""
               className="max-w-xs max-h-60 rounded-md border border-yellow-200 px-2 py-2"

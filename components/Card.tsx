@@ -69,7 +69,7 @@ const Card: React.FC<CardProps> = ({
         ) : (
           <Image
             alt=""
-            src={shuffle(posterCardImage).pop()}
+            src={shuffle(posterCardImage).pop() as string}
             className="rounded-t-[0.8rem] object-cover w-full"
           />
         )}
@@ -77,13 +77,15 @@ const Card: React.FC<CardProps> = ({
       <div className="bg-[#292b2f] relative h-[11.5rem] px-[1rem] rounded-b-[0.8rem] ">
         <div className="absolute -top-8  left-4 w-16 h-16 flex rounded-[1rem] p-1 bg-[#292b2f]">
           {avatarImage ? (
-            <img
+            <Image
+              alt=""
               src={avatarImage}
               className="  object-cover   rounded-[1rem]"
             />
           ) : (
-            <img
-              src={shuffle(sideBarImage).pop()}
+            <Image
+              alt=""
+              src={shuffle(sideBarImage).pop() as string}
               className="  object-cover   rounded-[1rem]"
             />
           )}

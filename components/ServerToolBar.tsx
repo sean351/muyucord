@@ -7,6 +7,7 @@ import { IoMdSettings } from "react-icons/io";
 import { MdKeyboardVoice } from "react-icons/md";
 
 import { Book, Chevron, Hashtag, Speakerphone } from "../icons";
+import Image from "next/image";
 
 type ServerToolBarProps = {};
 
@@ -206,7 +207,7 @@ const ServerToolBar: React.FC<ServerToolBarProps> = () => {
           className="flex items-center cursor-pointer"
           onClick={() => (isShow ? setIsShow(false) : setIsShow(true))}
         >
-          <img
+          <Image
             src={session?.user?.image as string}
             alt=""
             className="w-12 h-12 rounded-full"

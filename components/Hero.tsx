@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 import { FiSearch } from "react-icons/fi";
@@ -11,7 +12,8 @@ const Hero: React.FC<HeroProps> = ({ setSearchQuery, searchQuery }) => {
   return (
     <div className="relative  h-[13rem] sm:h-[16rem]  md:h-[19rem] rounded-[0.3rem] z-10">
       <div className="absolute  flex   w-full ">
-        <img
+        <Image
+          alt=""
           src="https://i.postimg.cc/sg5dkv6h/hero.jpg"
           className="object-cover w-full rounded-[0.3rem] h-[13rem]  md:h-[19rem] sm:h-[16rem]  "
         />

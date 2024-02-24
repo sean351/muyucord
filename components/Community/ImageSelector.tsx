@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 
 type ImageSelectorProps = {
@@ -27,7 +28,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
       <div className="flex flex-werp items-end gap-14">
         {selectedFileb ? (
           <div className="flex items-end gap-14">
-            <img
+            <Image
               src={selectedFileb}
               alt=""
               className="max-w-xs max-h-fit  rounded-md cursor-pointer border border-gray-500 px-2 py-2"
@@ -47,7 +48,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
           </div>
         ) : (
           <div className="flex items-end gap-14">
-            <img
+            <Image
               src="https://drive.google.com/uc?export=download&id=165KeFfXloGEmSNSJonKTpx_QWV7Tqg6O"
               alt=""
               className="max-w-sm max-h-36 rounded-md animate-pulse cursor-pointer border border-gray-500 px-2 py-2"
